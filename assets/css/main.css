@@ -499,11 +499,11 @@ body .footer .foot .caja4 ul .datos {
 }
 
 @media screen and (max-width: 858px) {
+  .nav-bar .derecha .ul-lista li:not(:last-child) {
+    display: none !important;
+  }
   .nav-bar .derecha .ul-lista .resp-but {
     display: block !important;
-  }
-  .nav-bar .derecha .ul-lista .anclas {
-    display: none !important;
   }
   .principal {
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(30%, rgba(255, 255, 255, 0.99)), color-stop(75%, transparent)), url(../img/bg-op.jpg) !important;
@@ -588,6 +588,22 @@ body .footer .foot .caja4 ul .datos {
   .footer .foot .caja3 .titulo,
   .footer .foot .caja4 .titulo {
     margin-top: 2em;
+  }
+}
+
+@media screen and (max-width: 858px) {
+  .nav-bar .derecha .ul-lista.responsive {
+    position: relative !important;
+  }
+  .nav-bar .derecha .ul-lista.responsive li {
+    float: none !important;
+    display: block !important;
+    text-align: left !important;
+  }
+  .nav-bar .derecha .ul-lista.responsive .resp-but {
+    position: absolute !important;
+    right: 0;
+    top: 0;
   }
 }
 

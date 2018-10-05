@@ -567,12 +567,11 @@ body {
     .nav-bar {
         .derecha {
             .ul-lista {
+                li:not(:last-child){
+                    display: none !important;
+                }
                 .resp-but {
                     display: block !important;
-                }
-
-                .anclas {
-                    display: none !important;
                 }
             }
         }
@@ -688,6 +687,26 @@ body {
 
                 .titulo {
                     margin-top: 2em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 858px){
+    .nav-bar {
+        .derecha {
+            .ul-lista.responsive {
+                position: relative !important;
+                li{
+                    float: none !important;
+                    display: block !important;
+                    text-align: left !important;
+                }
+                .resp-but {
+                    position: absolute !important;
+                    right: 0;
+                    top: 0;
                 }
             }
         }
