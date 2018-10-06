@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    
+
     .nav-bar {
         width: 100%;
         background-color: #fff;
@@ -25,10 +25,16 @@ body {
 
             .ul-lista {
                 width: 100%;
+                
                 display: flex;
                 justify-content: flex-end;
 
                 li {
+                    /*
+                    display: block;
+                    float: right;
+                    ///////*/
+
                     list-style-type: none;
                     padding: 1.3em 1em 1.3em 1em;
 
@@ -106,7 +112,8 @@ body {
                             background-color: #B42A2A;
                             border-radius: 3px;
                             cursor: pointer;
-                            .buton{
+
+                            .buton {
                                 text-decoration: none;
                                 background-color: #B42A2A;
                                 color: white;
@@ -567,11 +574,14 @@ body {
     .nav-bar {
         .derecha {
             .ul-lista {
-                li:not(:last-child){
+                li:not(:last-child) {
                     display: none !important;
                 }
+
                 .resp-but {
-                    display: block !important;
+                    margin-left: 1em !important;
+                    flex-direction: column;
+                    display: flex !important;
                 }
             }
         }
@@ -693,16 +703,18 @@ body {
     }
 }
 
-@media screen and (max-width: 858px){
+@media screen and (max-width: 858px) {
     .nav-bar {
         .derecha {
             .ul-lista.responsive {
                 position: relative !important;
-                li{
+
+                li {
                     float: none !important;
                     display: block !important;
-                    text-align: left !important;
+                    text-align: right !important;
                 }
+
                 .resp-but {
                     position: absolute !important;
                     right: 0;
