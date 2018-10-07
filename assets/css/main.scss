@@ -12,28 +12,29 @@ body {
         display: flex;
         border-bottom: 1px solid #eeee;
 
-        .izquierda {
-            width: 50%;
-
-            .contenedor {
-                width: 100%;
-            }
-        }
 
         .derecha {
-            width: 50%;
+            width: 100%;
 
             .ul-lista {
-                width: 100%;
-                
-                display: flex;
-                justify-content: flex-end;
+                width: 100%;                
+                margin-top: 0.5em;
+                /*display: flex;
+                justify-content: flex-end;*/
 
+                .ico{
+                    position: absolute;
+                    width: 3em;
+                    height: 3em;
+                    background-image: url("../img/icono.png");
+                    background-position: center;
+                    background-size: cover;
+                }
                 li {
-                    /*
+                    
                     display: block;
                     float: right;
-                    ///////*/
+                    /*///////*/
 
                     list-style-type: none;
                     padding: 1.3em 1em 1.3em 1em;
@@ -712,7 +713,7 @@ body {
                 li {
                     float: none !important;
                     display: block !important;
-                    text-align: right !important;
+                    text-align: left !important;
                 }
 
                 .resp-but {
