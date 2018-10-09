@@ -1,0 +1,3 @@
+[submodule "Admin/Admin/angular-admin-lte"]
+	path = Admin/Admin/angular-admin-lte
+	url = git://github.com/mika-el/angular-admin-lte
