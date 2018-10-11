@@ -219,8 +219,8 @@ $(document).ready(function(){
     });
   });
   */
-carousel();
 
+carousel();
 function carousel() {
     $('#my-img').css({
         background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/bg-2.jpg)",
@@ -293,3 +293,17 @@ function carousel() {
         }
     }
 }
+
+//scroll
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        
+        $('#return-to-top').fadeIn(200);    
+    } else {
+        $('#return-to-top').fadeOut(200);   
+    }
+});
+$('#return-to-top').click(function() {      
+    $('body,html').animate({
+        scrollTop : 0                       
+    }, 500);
+});
