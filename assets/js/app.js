@@ -230,7 +230,7 @@ function carousel() {
 
     var bar = document.getElementById("bar");
     var width = 1;
-    var id = setInterval(frame, 150);
+    var id = setInterval(frame, 15);
     var status = 1;
 
     function frame() {
@@ -251,7 +251,7 @@ function carousel() {
                 case 2:
                     {
                         status++;
-                    
+
                         $('#my-img').fadeIn();
                         $('#my-img').css({
                             background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/1.jpg)",
@@ -262,11 +262,22 @@ function carousel() {
                     }
                 case 3:
                     {
-           
-                        status = 1;
+
+                        status++;
                         $('#my-img').fadeIn();
                         $('#my-img').css({
                             background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/bg-1.jpg)",
+                            backgroundSize: "cover",
+                            backgroundPosition: "center"
+                        });
+                        break;
+                    }
+                case 4:
+                    {
+                        status = 1;
+                        $('#my-img').fadeIn();
+                        $('#my-img').css({
+                            background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/3.jpg)",
                             backgroundSize: "cover",
                             backgroundPosition: "center"
                         });
