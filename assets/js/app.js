@@ -294,6 +294,39 @@ function carousel() {
     }
 }
 
+var changeBGclick = () => {
+    $('#img').click(function(){       
+        $('#my-img').css({
+            background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/bg-2.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+        });
+    });
+    $('#img1').click(function(){
+        $('#my-img').css({
+            background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/1.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+        });
+    });
+    $('#img2').click(function(){
+        $('#my-img').css({
+            background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/bg-1.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+        });
+    });
+    $('#img3').click(function(){
+        $('#my-img').css({
+            background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/3.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+        });
+    });
+};
+changeBGclick();
+
+
 //scroll
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 50) {        
@@ -307,3 +340,4 @@ $('#return-to-top').click(function() {
         scrollTop : 0                       
     }, 500);
 });
+
