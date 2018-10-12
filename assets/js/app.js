@@ -230,7 +230,7 @@ function carousel() {
 
     var bar = document.getElementById("bar");
     var width = 1;
-    var id = setInterval(frame, 15);
+    var id = setInterval(frame, 1);
     var status = 1;
 
     function frame() {
