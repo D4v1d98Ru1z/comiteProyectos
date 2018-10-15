@@ -221,6 +221,7 @@ $(document).ready(function(){
   */
 
 carousel();
+
 function carousel() {
     $('#my-img').css({
         background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/bg-2.jpg)",
@@ -294,29 +295,106 @@ function carousel() {
     }
 }
 
+$(window).resize(function () {
+
+    if ($(window).width() <= 858) {
+        $('#my-img').css({
+            background: "linear-gradient(0deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/bg-op.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+        });
+        var bar = document.getElementById("bar");
+        var width = 1;
+        var id = setInterval(frame, 1);
+        var status = 1;
+
+        function frame() {
+            if (width == 100) {
+
+                switch (status) {
+                    case 1:
+                        {
+                            status++;
+                            $('#my-img').fadeIn();
+                            $('#my-img').css({
+                                background: "linear-gradient(0deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/bg-op.jpg)",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center"
+                            });
+
+                            break;
+                        }
+                    case 2:
+                        {
+                            status++;
+
+                            $('#my-img').fadeIn();
+                            $('#my-img').css({
+                                background: "linear-gradient(0deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/1.jpg)",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center"
+                            });
+                            console.log("I'm in ");
+                            break;
+                        }
+                    case 3:
+                        {
+
+                            status++;
+                            $('#my-img').fadeIn();
+                            $('#my-img').css({
+                                background: "linear-gradient(0deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/bg-1.jpg)",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center"
+                            });
+                            break;
+                        }
+                    case 4:
+                        {
+                            status = 1;
+                            $('#my-img').fadeIn();
+                            $('#my-img').css({
+                                background: "linear-gradient(0deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/3.jpg)",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center"
+                            });
+                            break;
+                        }
+                }
+                clearInterval(id);
+                id = setInterval(frame, 150);
+                width = 0;
+            } else {
+                width++;
+                bar.style.width = width + '%';
+            }
+        }
+    }
+});
+
 var changeBGclick = () => {
-    $('#img').click(function(){       
+    $('#img').click(function () {
         $('#my-img').css({
             background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/bg-2.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center"
         });
     });
-    $('#img1').click(function(){
+    $('#img1').click(function () {
         $('#my-img').css({
             background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/1.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center"
         });
     });
-    $('#img2').click(function(){
+    $('#img2').click(function () {
         $('#my-img').css({
             background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/bg-1.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center"
         });
     });
-    $('#img3').click(function(){
+    $('#img3').click(function () {
         $('#my-img').css({
             background: "linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../assets/img/3.jpg)",
             backgroundSize: "cover",
@@ -328,16 +406,15 @@ changeBGclick();
 
 
 //scroll
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        
-        $('#return-to-top').fadeIn(200);    
+$(window).scroll(function () {
+    if ($(this).scrollTop() >= 50) {
+        $('#return-to-top').fadeIn(200);
     } else {
-        $('#return-to-top').fadeOut(200);   
+        $('#return-to-top').fadeOut(200);
     }
 });
-$('#return-to-top').click(function() {      
+$('#return-to-top').click(function () {
     $('body,html').animate({
-        scrollTop : 0                       
+        scrollTop: 0
     }, 500);
 });
-
