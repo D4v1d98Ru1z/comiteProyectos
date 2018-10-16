@@ -294,7 +294,7 @@ function carousel() {
         }
     }
 }
-
+/*
 $(window).resize(function () {
 
     if ($(window).width() <= 858) {
@@ -371,7 +371,7 @@ $(window).resize(function () {
         }
     }
 });
-
+*/
 var changeBGclick = () => {
     $('#img').click(function () {
         $('#my-img').css({

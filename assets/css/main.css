@@ -546,10 +546,10 @@ body .footer .foot .caja4 ul .datos {
     display: flex !important;
   }
   .principal .bg-img {
-    /*
-            background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../img/bg-op.jpg) !important;
-            background-size: cover, cover, cover, cover;
-            background-position: center, center, center, center;*/
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(30%, rgba(255, 255, 255, 0.99)), color-stop(75%, transparent)), url(../img/bg-op.jpg) !important;
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../img/bg-op.jpg) !important;
+    background-size: cover, cover, cover, cover;
+    background-position: center, center, center, center;
   }
   .principal .bg-img .cajapadre .caja1 .contenedor {
     width: 100% !important;
