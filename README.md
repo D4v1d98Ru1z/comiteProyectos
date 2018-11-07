@@ -4,4 +4,4 @@ Esta aplicación está diseñada para que los estudiantes de la Universidad Libr
 
 ## Desarrollado
 
-La plataforma web está siendo desarrollada con un framework de PHP ´Laravel´ 
+La plataforma web está siendo desarrollada con un framework de PHP `Laravel`
