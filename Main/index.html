@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="../assets/css/but-top.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/js/Circliful/jquery-plugin-circliful-master/css/jquery.circliful.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
@@ -15,69 +17,72 @@
 </head>
 
 <body>
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
     <nav class="nav-bar">
-        <div class="izquierda">
-            <div class="contenedor">
-
-            </div>
-        </div>
         <div class="derecha">
-            <ul class="ul-lista">
-                <li class="resp-but"><a href="#" class="links bars"><i class="fas fa-bars"></i></a></li>
-                <li class="anclas"><a href="#" class="links">Inicio</a></li>
-                <li class="anclas"><a href="#" class="links">Recordar</a></li>
-                <li class="anclas"><a href="#" class="links">Contacto</a></li>
+
+            <ul class="ul-lista" id="Dropdown">
+                <!--<div class="ico"></div>-->
+                <li class="anclas"><a href="#Inicio" class="links">Inicio</a></li>
+                <li class="anclas"><a href="#recordar" class="links">Recordar</a></li>
+                <li class="anclas"><a href="#Contacto" class="links">Contacto</a></li>
                 <li class="anclas"><a href="login.html" class="butn">Entrar</a></li>
+                <li class="resp-but"><a href="javascript:void(0);" class="links bars" onclick="topNav()"><i class="fas fa-bars"></i></a></li>
             </ul>
         </div>
     </nav>
-    <section class="principal">
-        <div class="cajapadre">
-            <div class="caja1">
-                <div class="contenedor">
-                    <h1 class="titulo">Bienvenidos al comite de Proyectos de grado</h1>
-                    <p class="texto">Espacio creado para el manejo y colaboración de Proyectos de grado en la
-                        Facultad
-                        de Ingeniería de la Universidad Libre.</p>
-                    <div class="btncont">
-                        <button class="butn"><a class="buton" href="login.html">Ingresar</a></button>
+    <section class="principal" id="Inicio" >
+        <div class="bg-img" id="my-img">
+            <div class="cajapadre">
+                <div class="caja1">
+                    <div class="contenedor">
+                        <h1 class="titulo">Bienvenidos al comité de Proyectos de grado</h1>
+                        <p class="texto">Espacio creado para el manejo y colaboración de Proyectos de grado en la
+                            Facultad
+                            de Ingeniería de la Universidad Libre.</p>
+                        <div class="btncont">
+                            <button class="butn"><a class="buton" href="login.html">Ingresar</a></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="caja2">
-                <div class="programa">
-                    <div class="cajahija">
-                        <div class="texto">
-                            <p>Ingeniería de Sistemas</p>
+                <div class="caja2">
+                    <div class="programa">
+                        <div class="cajahija" id="img">
+                            <div class="texto">
+                                <p>Ingeniería de Sistemas</p>
+                            </div>
+                            <div class="img"></div>
                         </div>
-                        <div class="img"></div>
-                    </div>
-                    <div class="cajahija">
-                        <div class="texto">
-                            <p>Ingeniería Mecanica</p>
+                        <div class="cajahija" id="img1">
+                            <div class="texto">
+                                <p>Ingeniería Mecanica</p>
+                            </div>
+                            <div class="img2"></div>
                         </div>
-                        <div class="img"></div>
-                    </div>
-                    <div class="cajahija">
+                        <div class="cajahija" id="img2">
 
-                        <div class="texto">
-                            <p>Ingeniería Ambiental</p>
+                            <div class="texto">
+                                <p>Ingeniería Industrial</p>
+                            </div>
+                            <div class="img3"></div>
                         </div>
-                        <div class="img"></div>
-                    </div>
-                    <div class="cajahija">
+                        <div class="cajahija" id="img3">
 
-                        <div class="texto">
-                            <p>Ingeniería Industrial</p>
+                            <div class="texto">
+                                <p>Ingeniería Ambiental</p>
+                            </div>
+                            <div class="img4"></div>
                         </div>
-                        <div class="img"></div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="loading">
+            <div id="bar" style="width: 1%"></div>
+        </div>
     </section>
 
-    <section class="recordar">
+    <section class="recordar" id="recordar" >
         <div class="cajapadre">
             <div class="izquierda">
                 <h3 class="titulo">
@@ -144,7 +149,7 @@
             </div>
         </div>
     </section>
-    <section class="contacto">
+    <section class="contacto" id="Contacto">
         <div class="cajapadre form-structor">
             <div class="form-cont signup caja1">
                 <h2 class="titulo form-title" id="signup"><span></span> Envianos un mensaje</h2>
@@ -198,11 +203,11 @@
             <div class="caja2">
                 <h4 class="titulo">Documentos</h4>
                 <ul>
-                    <li class="download"><a href="#">Reglamento</a></li>
-                    <li class="download"><a href="#">Procedimientos</a></li>
-                    <li class="download"><a href="#">Propuesta</a></li>
-                    <li class="download"><a href="#">Anteproyecto</a></li>
-                    <li class="download"><a href="#">Proyecto</a></li>
+                    <li class="download"><a href="../assets/docs/Procedimientos.docx" download >Procedimientos</a></li>
+                    <li class="download"><a href="../assets/docs/Reglamento.pdf" download >Reglamento</a></li>
+                    <li class="download"><a href="../assets/docs/propuesta.docx" download >Propuesta</a></li>
+                    <li class="download"><a href="../assets/docs/anteproyecto.docx" download >Anteproyecto</a></li>
+                    <li class="download"><a href="../assets/docs/proyecto.docx" download >Proyecto</a></li>
                 </ul>
             </div>
             <div class="caja3">
@@ -225,6 +230,7 @@
         </footer>
     </section>
 
+
     <script src="../assets/js/Circle/circles-master/circles.min.js"></script>
     <script src="../assets/js/jQuery/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../assets/js/Circliful/jquery-plugin-circliful-master//js/jquery.circliful.min.js"></script>
@@ -232,3 +238,6 @@
 </body>
 
 </html>
+<!--comment
+https://codepen.io/charliearlie/pen/LdPgpx
+-->

@@ -5,30 +5,38 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    
+
     .nav-bar {
         width: 100%;
         background-color: #fff;
         display: flex;
         border-bottom: 1px solid #eeee;
 
-        .izquierda {
-            width: 50%;
-
-            .contenedor {
-                width: 100%;
-            }
-        }
 
         .derecha {
-            width: 50%;
+            width: 100%;
 
             .ul-lista {
                 width: 100%;
-                display: flex;
-                justify-content: flex-end;
+                margin-top: 0.5em;
+                /*display: flex;
+                justify-content: flex-end;*/
+
+                .ico {
+                    position: absolute;
+                    width: 3em;
+                    height: 3em;
+                    background-image: url("../img/icono.png");
+                    background-position: center;
+                    background-size: cover;
+                }
 
                 li {
+
+                    display: block;
+                    float: right;
+                    /*///////*/
+
                     list-style-type: none;
                     padding: 1.3em 1em 1.3em 1em;
 
@@ -65,89 +73,123 @@ body {
 
     .principal {
         width: 100%;
-        background-image: linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../img/bg-2.jpg);
-        background-size: cover, cover, cover, cover;
-        background-position: center, center, center, center;
 
-        .cajapadre {
+        .bg-img {
             width: 100%;
-            height: 100%;
+            /*background-image: linear-gradient(60deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../img/bg-2.jpg);
+            background-size: cover, cover, cover, cover;
+            background-position: center, center, center, center;*/
 
 
-            .caja1 {
-                max-width: 1500px;
-                margin: auto;
-                //margin: 20em;
-                padding-top: 10em;
+            .cajapadre {
+                width: 100%;
+                height: 100%;
 
-                .contenedor {
-                    width: 50%;
 
-                    .titulo {
-                        font-size: 3em;
-                        font-weight: 400;
-                        margin-bottom: 0.5em;
-                    }
+                .caja1 {
+                    max-width: 1500px;
+                    margin: auto;
+                    //margin: 20em;
+                    padding-top: 10em;
 
-                    .texto {
-                        color: #565c61;
-                        font-size: 1.3em;
-                    }
+                    .contenedor {
+                        width: 50%;
 
-                    .btncont {
-                        width: 100%;
+                        .titulo {
+                            font-size: 3em;
+                            font-weight: 400;
+                            margin-bottom: 0.5em;
+                        }
 
-                        .butn {
-                            margin-top: 2.5em;
-                            border: none;
-                            padding: 1.25em 2.89em;
-                            font-size: 0.9em;
-                            color: white;
-                            background-color: #B42A2A;
-                            border-radius: 3px;
-                            cursor: pointer;
-                            .buton{
-                                text-decoration: none;
-                                background-color: #B42A2A;
-                                color: white;
+                        .texto {
+                            color: #565c61;
+                            font-size: 1.3em;
+                        }
+
+                        .btncont {
+                            width: 100%;
+
+                            .butn {
+                                margin-top: 2.5em;
+                                border: none;
+                                padding: 1.25em 2.89em;
                                 font-size: 0.9em;
+                                color: white;
+                                background-color: #B42A2A;
+                                border-radius: 3px;
+                                cursor: pointer;
+
+                                .buton {
+                                    text-decoration: none;
+                                    background-color: #B42A2A;
+                                    color: white;
+                                    font-size: 0.9em;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            .caja2 {
-                width: 100%;
+                .caja2 {
+                    width: 100%;
 
-                .programa {
-                    max-width: 1200px;
-                    margin: auto;
-                    display: flex;
-                    padding-top: 10em;
-                    padding-bottom: 10em;
-
-                    .cajahija {
-                        margin: 0.5em;
-                        width: 20%;
-                        border: 1px solid #e3e6f0;
-                        border-radius: 3px;
-                        background-color: #fff;
+                    .programa {
+                        max-width: 1200px;
+                        margin: auto;
                         display: flex;
+                        padding-top: 10em;
+                        padding-bottom: 10em;
 
-                        .texto {
-                            width: 60%;
-                            font-size: 1em;
-                            padding: 1em 0.5em;
-                            text-align: center;
-                        }
+                        .cajahija {
+                            margin: 0.5em;
+                            width: 20%;
+                            border: 1px solid #e3e6f0;
+                            border-radius: 3px;
+                            background-color: #fff;
+                            display: flex;
 
-                        .img {
-                            width: 40%;
-                            background-image: url("../img/bg-2.jpg");
-                            background-size: cover;
-                            background-position: center;
-                            border-radius: 0 3px 0 0;
+                            .texto {
+                                width: 60%;
+                                font-size: 1em;
+                                padding: 1em 0.5em;
+                                text-align: center;
+                            }
+
+                            .img {
+                                width: 40%;
+                                background-image: url("../img/bg-2.jpg");
+                                background-size: cover;
+                                background-position: center;
+                                border-radius: 0 3px 0 0;
+                            }
+
+                            .img2 {
+                                width: 40%;
+                                background-image: url("../img/1.jpg");
+                                background-size: cover;
+                                background-position: center;
+                                border-radius: 0 3px 0 0;
+                            }
+
+                            .img3 {
+                                width: 40%;
+                                background-image: url("../img/bg-1.jpg");
+                                background-size: cover;
+                                background-position: center;
+                                border-radius: 0 3px 0 0;
+                            }
+
+                            .img4 {
+                                width: 40%;
+                                background-image: url("../img/3.jpg");
+                                background-size: cover;
+                                background-position: center;
+                                border-radius: 0 3px 0 0;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
@@ -567,50 +609,56 @@ body {
     .nav-bar {
         .derecha {
             .ul-lista {
-                .resp-but {
-                    display: block !important;
+                li:not(:last-child) {
+                    display: none !important;
                 }
 
-                .anclas {
-                    display: none !important;
+                .resp-but {
+                    margin-left: 1em !important;
+                    flex-direction: column;
+                    display: flex !important;
                 }
             }
         }
     }
 
     .principal {
-        background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../img/bg-op.jpg) !important;
-        background-size: cover, cover, cover, cover;
-        background-position: center, center, center, center;
-        ;
 
-        .cajapadre {
-            .caja1 {
-                .contenedor {
-                    width: 100% !important;
+        .bg-img {
+            background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.99) 30%, transparent 75%), url(../img/bg-op.jpg) !important;
+            background-size: cover, cover, cover, cover;
+            background-position: center, center, center, center;
 
-                    .titulo {
-                        color: #fff
-                    }
 
-                    .texto {
-                        color: rgb(228, 228, 228) !important;
+
+            .cajapadre {
+                .caja1 {
+                    .contenedor {
+                        width: 100% !important;
+
+                        .titulo {
+                            color: #fff
+                        }
+
+                        .texto {
+                            color: rgb(228, 228, 228) !important;
+                        }
                     }
                 }
-            }
 
-            .caja2 {
-                width: 100% !important;
-                margin: auto !important;
+                .caja2 {
+                    width: 100% !important;
+                    margin: auto !important;
 
-                .programa {
-                    display: block !important;
+                    .programa {
+                        display: block !important;
 
-                    .cajahija {
-                        width: 100% !important;
-                        margin-top: 0.5em !important;
+                        .cajahija {
+                            width: 100% !important;
+                            margin-top: 0.5em !important;
+                        }
+
                     }
-
                 }
             }
         }
@@ -688,6 +736,28 @@ body {
 
                 .titulo {
                     margin-top: 2em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 858px) {
+    .nav-bar {
+        .derecha {
+            .ul-lista.responsive {
+                position: relative !important;
+
+                li {
+                    float: none !important;
+                    display: block !important;
+                    text-align: left !important;
+                }
+
+                .resp-but {
+                    position: absolute !important;
+                    right: 0;
+                    top: 0;
                 }
             }
         }
